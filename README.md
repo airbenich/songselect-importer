@@ -11,9 +11,14 @@ To download a file use this code in app.js:
 
 ```javascript
 var songselect = require('songselect-importer');
+
+var username = 'your@account.com';
+var password = 'yourpassword';
+var cclisongnumber = '1234567';
+
 songselect.init();
-songselect.login('your@account.com','yourpassword',function (result) {
-  songselect.downloadTxtFile(array[i].license,function (file) {
+songselect.login(username,password,function (result) {
+  songselect.downloadTxtFile(cclisongnumber,function (file) {
     console.log(file);
     songselect.logout();
   });
